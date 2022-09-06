@@ -9,5 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @Transactional(readOnly = true)
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {
-    Optional<AppUser> findByEmail(String email);
+    static Optional<AppUser> findByEmail(String email) {
+        return null;
+    }
 }
